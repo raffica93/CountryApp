@@ -1,0 +1,14 @@
+<h2>Per Capitale</h2>
+<hr>
+
+<div class="row ">
+    <div class="col">
+        <app-search (onValue)="search($event)" [placeholder]="'Ricerca per Capitale'"></app-search>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <hr>
+       <app-table [countries]="country"></app-table>
+    </div>
+</div>

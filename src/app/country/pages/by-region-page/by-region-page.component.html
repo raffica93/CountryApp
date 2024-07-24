@@ -1,0 +1,14 @@
+<h2>Per Continente</h2>
+<hr>
+
+<div class="row ">
+    <div class="col">
+        <app-search (onValue)="search($event)" [placeholder]="'Ricerca per Continente'"></app-search>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <hr>
+       <app-table [countries]="country"></app-table>
+    </div>
+</div>
