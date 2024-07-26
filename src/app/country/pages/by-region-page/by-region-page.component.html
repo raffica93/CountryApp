@@ -1,14 +1,17 @@
 <h2>Per Continente</h2>
 <hr>
 
-<div class="row ">
+<div class="row text-center">
     <div class="col">
-        <app-search (onValue)="search($event)" [placeholder]="'Ricerca per Continente'"></app-search>
+
+        <button *ngFor="let reg of region" (click)="search(reg)" 
+        class="btn btn-outline-primary m-2" [ngClass]="{'active': sel == reg}" >{{reg}}
+        </button>
     </div>
 </div>
 <div class="row">
     <div class="col">
         <hr>
-       <app-table [countries]="country"></app-table>
+        <app-table [countries]="country"></app-table>
     </div>
 </div>

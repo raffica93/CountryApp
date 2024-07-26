@@ -1,2 +1,8 @@
    <!-- searchbox -->
-   <input #txtInput (keyup.enter)="emitValue(txtInput.value)" type="text" [placeholder]="placeholder" class="form-control">
+   <input #txtInput (keyup)="onkeyPress(txtInput.value)" (keyup.enter)="emitValue(txtInput.value)" 
+   type="text" [placeholder]="placeholder" [value]="initialValue" class="form-control">
+  
+  
+   <!-- searchbox
+   <input #txtInput (keyup.enter)="emitValue(txtInput.value)" 
+   type="text" [placeholder]="placeholder" class="form-control"> -->

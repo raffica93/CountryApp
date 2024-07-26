@@ -3,12 +3,15 @@
 
 <div class="row ">
     <div class="col">
-        <app-search (onValue)="search($event)" [placeholder]="'Ricerca per Paese'"></app-search>
+        <app-search (onValue)="search($event)"  [initialValue]="initialValue" (onDebound)="search($event)" [placeholder]="'Ricerca per Paese'"></app-search>
     </div>
 </div>
 <div class="row">
     <div class="col">
         <hr>
-       <app-table [countries]="country"></app-table>
+       
+       
+       <app-loader *ngIf="isLoading "></app-loader>
+       <app-table *ngIf="!isLoading " [countries]="country"></app-table>
     </div>
 </div>

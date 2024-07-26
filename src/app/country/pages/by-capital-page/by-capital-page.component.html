@@ -3,7 +3,8 @@
 
 <div class="row ">
     <div class="col">
-        <app-search (onValue)="search($event)" [placeholder]="'Ricerca per Capitale'"></app-search>
+        <app-search (onValue)="search($event)" [placeholder]="'Ricerca per Capitale'" 
+        [initialValue]="initialValue"></app-search>
     </div>
 </div>
 <div class="row">

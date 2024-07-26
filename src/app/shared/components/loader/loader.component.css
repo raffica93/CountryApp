@@ -1,0 +1,11 @@
+/* posizionalo al centro della pagina di colore nero */
+.loader{
+
+
+background-color: white;
+padding: 5px 10px;
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
